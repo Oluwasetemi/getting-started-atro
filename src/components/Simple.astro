@@ -1,0 +1,28 @@
+---
+console.log(Astro.props)
+let name: string = Astro.props.name || 'Oluwasetemi';
+---
+
+<div class="banner">
+  <slot>
+    <img src="/assets/setemiojo.jpg" alt="my images">
+  </slot>
+</div>
+
+<style>
+  .banner {
+    text-align: center;
+    font-size: 1.2rem;
+    background: var(--color-light);
+    padding: 1em 1.5em;
+    padding-left: 0.75em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 40%;
+    height: 300px;
+    object-fit: contain;
+  }
+</style>
